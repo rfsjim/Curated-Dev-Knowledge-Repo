@@ -1,4 +1,5 @@
 /**
+ * singleton.ts
  * Singleton Patterns
  * Share a single global instance throughout the application
  * Singletons are created once and can be access globally

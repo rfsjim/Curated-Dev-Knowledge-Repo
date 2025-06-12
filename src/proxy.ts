@@ -1,4 +1,5 @@
 /**
+ * proxy.ts
  * Proxy Pattern
  * A Structural Pattern
  * Used to control access to an object (security, lazy loading etc.)

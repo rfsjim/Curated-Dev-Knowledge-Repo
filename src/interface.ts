@@ -1,4 +1,5 @@
 /*
+ * interface.ts
  * Behavioural Interfaces
  * Thinking about real-world interfaces for a remote control we have behaviours including:
  * powering on,
@@ -15,40 +16,40 @@
  * brightness down
  */
 
-interface PowerControl {
+export interface PowerControl {
     powerOn(): void;
     powerOff(): void; 
 }
 
-interface VolumeControl {
+export interface VolumeControl {
     volumeUp(): void;
     volumeDown(): void;
     mute(): void;
     unmute(): void;
 }
 
-interface ChannelControl {
+export interface ChannelControl {
     channelUp(): void;
     channelDown(): void;
     changeChannelTo(channel: number): void;
 }
 
-interface TemperatureControl {
+export interface TemperatureControl {
     temperatureUp(): void;
     temperatureDown(): void;
 }
 
-interface FanSpeedControl {
+export interface FanSpeedControl {
     fanSpeedUp(): void;
     fanSpeedDown(): void;
 }
 
-interface BrightnessControl {
+export interface BrightnessControl {
     brightnessUp(): void;
     brightnessDown(): void;
 }
 
-interface MediaControl {
+export interface MediaControl {
     play(): void;
     pause(): void;
     stop(): void;
@@ -57,7 +58,7 @@ interface MediaControl {
     record(): void;
   }
   
-  interface NavigationControl {
+export interface NavigationControl {
     up(): void;
     down(): void;
     left(): void;
@@ -67,19 +68,19 @@ interface MediaControl {
     home(): void;
   }
   
-  interface SourceControl {
+export interface SourceControl {
     changeInput(source: string): void;
   }
   
-  interface CaptionControl {
+export interface CaptionControl {
     toggleSubtitles(): void;
   }
   
-  interface VoiceControl {
+export interface VoiceControl {
     activateMicrophone(): void;
   }
 
-  class SmartTV implements
+class SmartTV implements
     PowerControl,
     VolumeControl,
     ChannelControl,
