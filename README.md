@@ -1,6 +1,6 @@
 # Software design patterns in Typescript
 
-General reusable code solutions to common occurring problems.
+Example code for design patterns. Where it makes sense classes and themes are continued across patterns.
 These aren't supposed to be fully functioning source code but templates, examples, and descriptions to assist in solving problems.
 The 23 Gang of Four (`GoF`) design patterns fall into three big camps:
 
