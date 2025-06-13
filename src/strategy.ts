@@ -49,3 +49,35 @@ export class BasicChannelControl implements ChannelControl {
         console.log(`Changing to ${channel}`);        
     }
 }
+
+export class SilentVolume implements VolumeControl {
+    private volume = 0;
+
+    volumeUp(): void {
+        console.log("Volume is locked to silent");
+    }
+    volumeDown(): void {
+        console.log("Volume is already silent");
+    }
+    mute(): void {
+        console.log("Muted (already silent)");
+    }
+    unmute(): void {
+        console.log("Unmute not allowed - silent mode active.");
+    }
+}
+
+export class FancyChannelGuide implements ChannelControl {
+    private currentChannel = 100;
+
+    channelUp(): void {
+        console.log("Navigate Up");
+    }
+    channelDown(): void {
+        console.log("Navigate Down");
+    }
+    changeChannelTo(channel: number): void {
+        this.currentChannel = channel;
+        console.log(`Changing to ${channel}`);
+    }
+}
