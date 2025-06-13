@@ -23,7 +23,7 @@ How do we organise objects and classes?
 - Adapter – convert one interface to another (e.g., old plug to new socket)
 - Bridge – separate abstraction from implementation
 - Composite – tree structure (like folders & files)
-- Decorator – wrap stuff to add behaviour
+- Decorator – wrap stuff to add behaviour, used to attach additional responsibilities to an object dynamically.
 - Facade – a simple front for complex subsystems
 - Flyweight – reuse shared objects to save memory
 - Proxy – control access to an object (security, lazy loading etc.)
@@ -31,8 +31,8 @@ How do we organise objects and classes?
 ## Behavioral Patterns
 How do objects communicate and behave?
 
-- Strategy – swap algorithms at runtime
-- Observer – event listeners / publish-subscribe
+- Strategy – swap algorithms at runtime, defines family of algorithms encapsulates each one and makes them interchangeable. 
+- Observer – event listeners / publish-subscribe. Defines one to many dependency between objects so that when one object changes state all it's dependents are notified. 
 - Command – encapsulate actions as objects
 - Chain of Responsibility – pass requests down a chain
 - Interpreter – language grammar representation
