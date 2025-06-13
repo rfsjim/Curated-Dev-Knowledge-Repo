@@ -80,27 +80,7 @@ export interface VoiceControl {
     activateMicrophone(): void;
   }
 
-export interface SceneControl {
-    updateScene(): void;
-}
-
-export interface Subject {
-    // Subscribe an observer to the subject
-    subscribe(observer: Observer): void;
-
-    // Unsubscribe an observer to the subject
-    unsubscribe(observer: Observer): void;
-
-    // Notify all observers about an event
-    notify(): void; 
-}
-
-export interface Observer {
-    // Receive update from the subject
-    update(subject: Subject): void;
-} 
-
-class SmartTV implements
+export class SmartTV implements
     PowerControl,
     VolumeControl,
     ChannelControl,
@@ -197,29 +177,29 @@ class SmartTV implements
       }
     }
 
-    class AirConditioner implements
-      PowerControl,
-      TemperatureControl,
-      FanSpeedControl {
+export class AirConditioner implements
+    PowerControl,
+    TemperatureControl,
+    FanSpeedControl {
 
-        powerOn(): void {
-          console.log("AC On");
-        }
-        powerOff(): void {
-          console.log("AC Off");
-        }
-
-        temperatureUp(): void {
-          console.log("Temperature Up");
-        }
-        temperatureDown(): void {
-          console.log("Temperature Down");
-        }
-
-        fanSpeedUp(): void {
-          console.log("Fan Speed Up");
-        }
-        fanSpeedDown(): void {
-          console.log("Fan Speed Down");
-        }
+      powerOn(): void {
+        console.log("AC On");
       }
+      powerOff(): void {
+        console.log("AC Off");
+      }
+
+      temperatureUp(): void {
+        console.log("Temperature Up");
+      }
+      temperatureDown(): void {
+        console.log("Temperature Down");
+      }
+
+      fanSpeedUp(): void {
+        console.log("Fan Speed Up");
+      }
+      fanSpeedDown(): void {
+        console.log("Fan Speed Down");
+      }
+  }
