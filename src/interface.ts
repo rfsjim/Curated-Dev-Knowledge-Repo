@@ -80,6 +80,26 @@ export interface VoiceControl {
     activateMicrophone(): void;
   }
 
+export interface SceneControl {
+    updateScene(): void;
+}
+
+export interface Subject {
+    // Subscribe an observer to the subject
+    subscribe(observer: Observer): void;
+
+    // Unsubscribe an observer to the subject
+    unsubscribe(observer: Observer): void;
+
+    // Notify all observers about an event
+    notify(): void; 
+}
+
+export interface Observer {
+    // Receive update from the subject
+    update(subject: Subject): void;
+} 
+
 class SmartTV implements
     PowerControl,
     VolumeControl,
