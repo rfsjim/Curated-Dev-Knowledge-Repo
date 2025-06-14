@@ -8,11 +8,11 @@
 
 /*
  * Structure
- * subscribers: Map<string, Observer[]>
+ * subscribers: Map<SceneName, Observer[]>
  * mainState
- * subscribe(scene: string, observer: Observer)
- * unsubscribe(scene: string, observer: Observer)
- * notify(event: string)
+ * subscribe(scene: SceneName, observer: Observer)
+ * unsubscribe(scene: SceneName, observer: Observer)
+ * notify(event: SceneName)
  * mainBusinessLogic()
  * 
  * for each (observer in observers)
@@ -20,7 +20,7 @@
  * 
  * Concrete subscribers
  * s = new ConcreateSubscriber()
- * update(scene: string)
+ * update(scene: SceneName)
  */
 
 /*
@@ -31,30 +31,38 @@
 
 import { SmartTV, AirConditioner } from "./class";
 
+type SceneName =
+    | "movie-night"
+    | "good-morning"
+    | "good-night"
+    | "warm-up-buttercup"
+    | "party-time"
+    | string;
+
 export interface Subject {
     // Subscribe an observer to the subject
-    subscribe(event: string, observer: Observer): void;
+    subscribe(event: SceneName, observer: Observer): void;
 
     // Unsubscribe an observer to the subject
-    unsubscribe(event: string, observer: Observer): void;
+    unsubscribe(event: SceneName, observer: Observer): void;
 
     // Notify all observers about an event
-    notify(event: string): void; 
+    notify(event: SceneName): void; 
 }
 
 export interface Observer {
     // Receive update from the subject
-    update(event: string): void;
+    update(event: SceneName): void;
 } 
 
 export class HomeHub implements Subject {
     // HomeHub scenes for the observers
-    public scene: string;
+    public scene: SceneName;
 
     // Hash map of subscribers and scenes
-    private subscribers: Map<string, Observer[]> = new Map();
+    private subscribers: Map<SceneName, Observer[]> = new Map();
 
-    subscribe(scene: string, observer: Observer): void {
+    subscribe(scene: SceneName, observer: Observer): void {
         // check if scene exists as a key
         if (!this.subscribers.has(scene)) {
             // add key-vaule pairs to hashmap
@@ -64,7 +72,7 @@ export class HomeHub implements Subject {
         this.subscribers.get(scene)!.push(observer);
         
     }
-    unsubscribe(scene: string, observer: Observer): void {
+    unsubscribe(scene: SceneName, observer: Observer): void {
         // get value associated with a key
         const observers = this.subscribers.get(scene);
         if (observers) {
@@ -77,7 +85,7 @@ export class HomeHub implements Subject {
         }
     }
 
-    notify(scene: string): void {
+    notify(scene: SceneName): void {
         const observers = this.subscribers.get(scene);
         console.log(`Broadcast to trigger scene ${scene} change`);
         if (observers) {
@@ -89,7 +97,7 @@ export class HomeHub implements Subject {
 }
 
 export class SmartTVObserver implements Observer {
-    update(scene: string): void {
+    update(scene: SceneName): void {
         if (scene === "movie-night") {
             const tv = new SmartTV();
             tv.powerOn();
@@ -100,7 +108,7 @@ export class SmartTVObserver implements Observer {
 }
 
 export class AirConditionerObserver implements Observer {
-    update(scene: string): void {
+    update(scene: SceneName): void {
         const ac = new AirConditioner();
 
         switch (scene) {    
