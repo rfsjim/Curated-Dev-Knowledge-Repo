@@ -83,3 +83,7 @@ export interface VoiceControl {
 export interface LightTemperatureStrategy {
     applyLightTemperature(): void;
 }
+
+export interface LightSceneFactory {
+    createLight(): PowerControl & BrightnessControl;
+}

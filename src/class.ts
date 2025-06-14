@@ -147,7 +147,7 @@ export class AirConditioner implements
       }
   }
 
-  export class lightBulb implements
+  export class LightBulb implements
     PowerControl,
     BrightnessControl {
   constructor() {

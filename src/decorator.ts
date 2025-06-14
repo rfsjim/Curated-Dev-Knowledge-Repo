@@ -4,7 +4,7 @@
  * used to attach additional responsibilities to an object dynamically.
  */
  
-import { lightBulb } from "./class.js";
+import { LightBulb } from "./class.js";
 import { LightTemperatureStrategy } from "./interface.js";
 
 
@@ -14,10 +14,12 @@ import { LightTemperatureStrategy } from "./interface.js";
  * Here, we create decorators for different types of light bulbs.
  */
 
-export class RGBLightDecorator extends lightBulb {
-    constructor(private decoratedLightBulb: lightBulb) {
+export class RGBLightDecorator extends LightBulb {
+    constructor(private decoratedLightBulb: LightBulb, private color: string = "white") {
         super();
         console.log("🌈 RGB Light Bulb Initialized");
+        console.log(`Initial color set to ${color}.`);
+        
     }
 
     turnOn(): void {
@@ -35,8 +37,8 @@ export class RGBLightDecorator extends lightBulb {
     }
 }
 
-export class DimmingLightDecorator extends lightBulb {
-    constructor(private decoratedLightBulb: lightBulb) {
+export class DimmingLightDecorator extends LightBulb {
+    constructor(private decoratedLightBulb: LightBulb) {
         super();
         console.log("💡 Dimming Light Bulb Initialized");
     }
@@ -52,8 +54,8 @@ export class DimmingLightDecorator extends lightBulb {
     }
 }
 
-export class FlashingLightDecorator extends lightBulb {
-    constructor(private decoratedLightBulb: lightBulb) {
+export class FlashingLightDecorator extends LightBulb {
+    constructor(private decoratedLightBulb: LightBulb) {
         super();
         console.log("🚨 Flashing Light Bulb Initialized");
     }
@@ -68,8 +70,8 @@ export class FlashingLightDecorator extends lightBulb {
     }
 }
 
-export class DiscoLightDecorator extends lightBulb {
-    constructor(private decoratedLightBulb: lightBulb) {
+export class DiscoLightDecorator extends LightBulb {
+    constructor(private decoratedLightBulb: LightBulb) {
         super();
         console.log("🕺 Disco Light Bulb Initialized");
     }
