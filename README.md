@@ -12,6 +12,7 @@ The 23 Gang of Four (`GoF`) design patterns fall into three big camps:
 How do we create objects in a flexible way?
 
 - Singleton – only one instance allowed
+- Simple Factory - Honourable mention not a true pattern
 - Factory Method – let a method decide which subclass to instantiate
 - Abstract Factory – a factory of related factories
 - Builder – step-by-step construction
