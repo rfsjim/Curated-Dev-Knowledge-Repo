@@ -24,95 +24,20 @@ import { LightBulb } from "./class";
 
 import { DimmingLightDecorator, RGBLightDecorator } from "./decorator";
 
-export class FocusLightFactory implements LightSceneFactory {
+// A Parameterised (or Configurable) Factory
+// One flexible factory that takes in the mood or colour as a parameter.
+// allows us to create different light scenes with different colors and decorators.
+export class ConfigurableLightFactory implements LightSceneFactory {
+    constructor (
+        private color: string,
+        private decorators: ((light: PowerControl & BrightnessControl) => PowerControl & BrightnessControl)[]
+    ) {}
+
     createLight(): PowerControl & BrightnessControl {
-        let light = new LightBulb();
-        light = new DimmingLightDecorator(light);
-        light = new RGBLightDecorator(light, "blue"); // Blue for focus
-        return light;
+        let light: PowerControl & BrightnessControl = new LightBulb();
+        for (const decorate of this.decorators) {
+            light = decorate(light);
+        }
+        return new RGBLightDecorator(light, this.color);
     }
 }
-
-export class RomanticLightFactory implements LightSceneFactory {
-    createLight(): PowerControl & BrightnessControl {
-        let light = new LightBulb();
-        light = new DimmingLightDecorator(light);
-        light = new RGBLightDecorator(light, "lightpink"); // Light Pink for romance
-        return light;
-    }
-}
-
-export class RelaxLightFactory implements LightSceneFactory {
-    createLight(): PowerControl & BrightnessControl {
-        let light = new LightBulb();
-        light = new DimmingLightDecorator(light);
-        light = new RGBLightDecorator(light, "red"); // Red for relaxation
-        return light;
-    }
-}
-
-export class JoyLightFactory implements LightSceneFactory {
-    createLight(): PowerControl & BrightnessControl {
-        let light = new LightBulb();
-        light = new DimmingLightDecorator(light);
-        light = new RGBLightDecorator(light, "yellow"); // Yellow for joy
-        return light;
-    }
-}
-
-export class FriendlyLightFactory implements LightSceneFactory {
-    createLight(): PowerControl & BrightnessControl {
-        let light = new LightBulb();
-        light = new DimmingLightDecorator(light);
-        light = new RGBLightDecorator(light, "orange"); // Orange for friendliness
-        return light;
-    }
-}
-
-export class CalmLightFactory implements LightSceneFactory {
-    createLight(): PowerControl & BrightnessControl {
-        let light = new LightBulb();
-        light = new DimmingLightDecorator(light);
-        light = new RGBLightDecorator(light, "green"); // Green for calm
-        return light;
-    }
-}
-
-export class InspireLightFactory implements LightSceneFactory {
-    createLight(): PowerControl & BrightnessControl {
-        let light = new LightBulb();
-        light = new DimmingLightDecorator(light);
-        light = new RGBLightDecorator(light, "purple"); // Purple for inspiration
-        return light;
-    }
-}
-
-export class SleepLightFactory implements LightSceneFactory {
-    createLight(): PowerControl & BrightnessControl {
-        let light = new LightBulb();
-        light = new DimmingLightDecorator(light);
-        light = new RGBLightDecorator(light, "red"); // Red for sleep
-        return light;
-    }
-}
-
-export class EnergyLightFactory implements LightSceneFactory {
-    createLight(): PowerControl & BrightnessControl {
-        let light = new LightBulb();
-        light = new DimmingLightDecorator(light);
-        light = new RGBLightDecorator(light, "orange"); // Orange for energy
-        return light;
-    }
-}
-
-const sceneFactoryMap = new Map<string, LightSceneFactory>([
-    ["focus", new FocusLightFactory()],
-    ["relax", new RelaxLightFactory()],
-    ["romantic", new RomanticLightFactory()],
-    ["joy", new JoyLightFactory()],
-    ["friendly", new FriendlyLightFactory()],
-    ["calm", new CalmLightFactory()],
-    ["inspire", new InspireLightFactory()],
-    ["sleep", new SleepLightFactory()],
-    ["energy", new EnergyLightFactory()],
-]);
