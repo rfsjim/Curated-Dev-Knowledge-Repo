@@ -1,7 +1,7 @@
 /*
  * observer.ts
  * Many to one relationship between the subject and observers
- * RemoteDevice turns into a home hub doesn't just control one device
+ * Alters RemoteDevice into a home hub doesn't just control one device
  * Broadcasts events like "night mode activated"  "morning wake up" or "movie scene"
  * Devices can subscribe to the home hub and react independently
  */

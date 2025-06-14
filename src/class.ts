@@ -1,6 +1,6 @@
 /*
  * class.ts
- * Hold the class objects that implement the interfaces.
+ * Hold the class objects that implement the interface behaviours.
  */
 
 import {
@@ -146,3 +146,25 @@ export class AirConditioner implements
         console.log("Fan Speed Down");
       }
   }
+
+  export class lightBulb implements
+    PowerControl,
+    BrightnessControl {
+  constructor() {
+        console.log("💡 Light Bulb Initialized");
+      }
+
+      powerOn(): void {
+        console.log("Light On");
+      }
+      powerOff(): void {
+        console.log("Light Off");
+      }
+
+      brightnessUp(): void {
+        console.log("Brightness Up");
+      }
+      brightnessDown(): void {
+        console.log("Brightness Down");
+      }
+    }

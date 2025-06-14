@@ -1,10 +1,14 @@
 /*
  * strategy.ts
- * Turning your control interfaces into a Strategy Pattern
+ * Turning behavioural control interfaces into a Strategy Pattern
  * Strategy – swap algorithms at runtime
  * We can compose controls in a modular, extensible way
  * Strategy defines a family of behaviours, encapsulates each one, and makes them interchangeable.
- * Plug-and-play control modules — the device doesn't care how something works, just that it has the correct control plugged in.
+ * Plug-and-play control modules — the device doesn't care how something works, 
+ * just that it has the correct control plugged in.
+ * This allows us to change the behaviour of a device at runtime
+ * without modifying the device's code.
+ * This example shows how to implement a strategy pattern as a universal remote control.
  */
 
 import { PowerControl, VolumeControl, ChannelControl } from "./interface";

@@ -79,3 +79,7 @@ export interface CaptionControl {
 export interface VoiceControl {
     activateMicrophone(): void;
   }
+
+export interface LightTemperatureStrategy {
+    applyLightTemperature(): void;
+}

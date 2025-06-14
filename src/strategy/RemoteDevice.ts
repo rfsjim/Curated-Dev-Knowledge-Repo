@@ -1,4 +1,7 @@
-// RemoteDevice.ts
+/*
+ * RemoteDevice.ts
+ * This file implements a universal remote control using the Strategy Pattern.
+ */
 
 import {PowerControl, VolumeControl, ChannelControl} from "../interface";
 
