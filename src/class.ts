@@ -26,8 +26,8 @@ export class SmartTV implements
     MediaControl,
     NavigationControl {
 
-      constructor() {
-        console.log("📺 Smart TV Initialized");
+      constructor(tvName: string = "Smart TV") {
+        console.log(`${tvName} 📺 Smart TV Initialized`);
       }
       
       powerOn(): void {
@@ -121,8 +121,8 @@ export class AirConditioner implements
     PowerControl,
     TemperatureControl,
     FanSpeedControl {
-  constructor() {
-        console.log("❄️ Air Conditioner Initialized");
+  constructor(acName: string = "Air Conditioner") {
+        console.log(`${acName} ❄️ Air Conditioner Initialized`);
       }
 
       powerOn(): void {
