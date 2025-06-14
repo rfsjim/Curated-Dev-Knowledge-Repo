@@ -2,7 +2,7 @@
 
 import {PowerControl, VolumeControl, ChannelControl} from "../interface";
 
-export class RemoteDevice {
+class RemoteDevice {
     constructor(
         private power: PowerControl,
         private volume: VolumeControl,

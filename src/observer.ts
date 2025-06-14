@@ -8,28 +8,19 @@
 
 /*
  * Structure
- * subscribers: Subscriber[]
+ * subscribers: Map<string, Observer[]>
  * mainState
- * subscribe(s Subscriber)
- * unsubscribe(s Subscriber)
- * notifySubscribers()
+ * subscribe(scene: string, observer: Observer)
+ * unsubscribe(scene: string, observer: Observer)
+ * notify(event: string)
  * mainBusinessLogic()
  * 
- * for each (s in subscribers)
- *  s.update(this)
- * 
- * mainState == newState
- * notifySubscribers()
- * 
- * interface Subscriber
- * updateSubscriber(context)
+ * for each (observer in observers)
+ *  observer.update(scene)
  * 
  * Concrete subscribers
  * s = new ConcreateSubscriber()
- * publisher.subscribe(s)
- * update(context)
- * 
- * Client
+ * update(scene: string)
  */
 
 /*
@@ -38,7 +29,7 @@
  * Declare methods for managing subscribers
  */
 
-import { SmartTV, AirConditioner } from "./interface";
+import { SmartTV, AirConditioner } from "./class";
 
 export interface Subject {
     // Subscribe an observer to the subject
