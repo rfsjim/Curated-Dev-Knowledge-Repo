@@ -1,6 +1,7 @@
 /*
  * main.ts - for observer usage
  * Example Observer usage
+ * Ovserver, subscriber, in an IoT example 
  */
 
 import {HomeHub, SmartTVObserver, AirConditionerObserver} from "../observer";
