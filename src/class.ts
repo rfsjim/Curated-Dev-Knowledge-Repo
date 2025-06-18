@@ -14,7 +14,7 @@ import {
     NavigationControl,
     TemperatureControl,
     FanSpeedControl
-} from "./interface.js";
+} from "./interface";
 
 export class SmartTV implements
     PowerControl,

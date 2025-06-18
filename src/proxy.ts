@@ -23,6 +23,8 @@
 /**
  * The Target interface shows what is in common between the actual object and the standIn
  */
+
+// ToDO: Refactor interface into interface.ts file
 interface Target {
     request(): void;
 }
