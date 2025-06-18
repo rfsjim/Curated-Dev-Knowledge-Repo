@@ -4,8 +4,8 @@
  * used to attach additional responsibilities to an object dynamically.
  */
  
-import { LightBulb } from "./class.js";
-import { LightTemperatureStrategy } from "./interface.js";
+import { LightBulb } from "./class";
+import { LightTemperatureStrategy } from "./interface";
 
 
 /**

@@ -32,6 +32,8 @@ type SceneName =
     | "party-time"
     | string;
 
+// ToDo: Refactor into interace.ts
+
 export interface Subject {
     // Subscribe an observer to the subject
     subscribe(event: SceneName, observer: Observer): void;
