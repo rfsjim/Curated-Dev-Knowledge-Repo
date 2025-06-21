@@ -39,7 +39,7 @@ type SceneName =
     | "party-time"
     | string;
 
-// ToDo refactor interfaces into interface.ts
+// TODO refactor interfaces into interface.ts
 
 export interface Subject {
     // Subscribe an observer to the subject
