@@ -43,12 +43,13 @@ Code implementations of core computer science techniques.
 
 - **Sorting Algorithms**
   <!-- - [Bubble Sort](algorithms/sorting/bubble_sort.js)
+  - [Selection Sort](algorithms/sorting/selection_sort.js)
   - [Quick Sort](algorithms/sorting/quick_sort.js)
   - [Merge Sort](algorithms/sorting/merge_sort.js)
   - [Radix Sort](algorithms/sorting/radix_sort.js) -->
 - **Searching Algorithms**
+  - [Linear Search](algorithms/searching/linear_search.c)
   <!-- - [Binary Search](algorithms/searching/binary_search.js)
-  - [Linear Search](algorithms/searching/linear_search.js)
   - [Depth-first search (DFS)](algorithms/searching/dfs.js)
   - [Dijkstra’s](algorithms/shortest_path/dijkstra.js) -->
 - **Recursion**

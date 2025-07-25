@@ -6,6 +6,9 @@ A growing reference of fundamental algorithms, data structures, and programming 
 
 ### Sorting Algorithms
 
+### Searching Algorithms
+- [Linear Search](algorithms/searching/linear_search.c)
+
 ### Data Structures
 
 ### Core Concepts
