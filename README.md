@@ -8,6 +8,10 @@ It’s part learning tool, part long-term reference.
 
 It will grow as my knowledge and skills grow. I hope you find something useful in here, too — as I follow in the footsteps of giants and explore the endless world of code.
 
+### Conceptual View Patterns &amp; Algorithms
+* **Design Patterns** - A strategic and architectual level looking at how should I structure and shape this solution?
+* **Algorithms** - A tactical and procedural level looking at how should I perform operations to efficiently solve this task. 
+
 ![Following in the footsteps of giants](assets/memes/standing_upon_shoulders_of_giants.jpg)
 
 ## 📚 Sections
@@ -44,11 +48,14 @@ Code implementations of core computer science techniques.
   - [Radix Sort](algorithms/sorting/radix_sort.js) -->
 - **Searching Algorithms**
   <!-- - [Binary Search](algorithms/searching/binary_search.js)
-  - [Linear Search](algorithms/searching/linear_search.js) -->
+  - [Linear Search](algorithms/searching/linear_search.js)
+  - [Depth-first search (DFS)](algorithms/searching/dfs.js)
+  - [Dijkstra’s](algorithms/shortest_path/dijkstra.js) -->
 - **Recursion**
   <!-- - [Factorial](algorithms/recursion/factorial.js) -->
 - **Data Structures**
   <!-- - [Hash Table](algorithms/data_structures/hash_table.js)
+  - [Hash Map](algorithms/data_structures/hash_map.js)
   - [Linked List](algorithms/data_structures/linked_list.js)
   - [Stack](algorithms/data_structures/stack.js) -->
 
