@@ -11,9 +11,9 @@ The 23 Gang of Four (`GoF`) design patterns fall into three big camps:
 ## Creational Patterns
 How do we create objects in a flexible way?
 
-- Singleton – only one instance allowed
+- [Singleton](design_patterns/creational/singleton.ts) – only one instance allowed
 - Simple Factory - Honourable mention not a true pattern
-- Factory Method – let a method decide which subclass to instantiate
+- [Factory Method](design_patterns/creational/factory.ts) – let a method decide which subclass to instantiate
 - Abstract Factory – a factory of related factories
 - Builder – step-by-step construction
 - Prototype – clone existing objects
@@ -24,16 +24,16 @@ How do we organise objects and classes?
 - Adapter – convert one interface to another (e.g., old plug to new socket)
 - Bridge – separate abstraction from implementation
 - Composite – tree structure (like folders & files)
-- Decorator – wrap stuff to add behaviour, used to attach additional responsibilities to an object dynamically.
+- [Decorator](design_patterns/structural/decorator.ts) – wrap stuff to add behaviour, used to attach additional responsibilities to an object dynamically.
 - Facade – a simple front for complex subsystems
 - Flyweight – reuse shared objects to save memory
-- Proxy – control access to an object (security, lazy loading etc.)
+- [Proxy](design_patterns/structural/proxy.ts) – control access to an object (security, lazy loading etc.)
 
 ## Behavioral Patterns
 How do objects communicate and behave?
 
-- Strategy – swap algorithms at runtime, defines family of algorithms encapsulates each one and makes them interchangeable. 
-- Observer – event listeners / publish-subscribe. Defines one to many dependency between objects so that when one object changes state all it's dependents are notified. 
+- [Strategy](design_patterns/behavioral/strategy.ts) – swap algorithms at runtime, defines family of algorithms encapsulates each one and makes them interchangeable. 
+- [Observer](design_patterns/behavioral/observer.ts) – event listeners / publish-subscribe. Defines one to many dependency between objects so that when one object changes state all it's dependents are notified. 
 - Command – encapsulate actions as objects
 - Chain of Responsibility – pass requests down a chain
 - Interpreter – language grammar representation
