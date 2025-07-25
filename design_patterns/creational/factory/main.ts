@@ -8,7 +8,7 @@
  */
 
 import { ConfigurableLightFactory } from '../factory';
-import { DimmingLightDecorator } from '../decorator';
+import { DimmingLightDecorator } from '../../structural/decorator';
 
 // Factory Registry Map
 const sceneFactoryMap = new Map<string, ConfigurableLightFactory>([

@@ -29,7 +29,7 @@
  * Declare methods for managing subscribers
  */
 
-import { SmartTV, AirConditioner } from "./class";
+import { SmartTV, AirConditioner } from "../class";
 
 type SceneName =
     | "movie-night"

@@ -5,8 +5,8 @@
  */
 
 import { SingletonHomeHub } from '../singleton';
-import { SmartTVObserver } from '../observer';
-import { SmartTV } from '../class';
+import { SmartTVObserver } from '../../behavioral/observer';
+import { SmartTV } from '../../class';
 
 const hub = SingletonHomeHub.getInstance();
 const tv = new SmartTVObserver();

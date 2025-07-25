@@ -6,7 +6,7 @@
  * Each decorator adds specific functionality to the base lightBulb class. 
  */
 
-import { LightBulb } from '../class';
+import { LightBulb } from '../../class';
 import { CoolWhiteLightStrategy,
          WarmWhiteLightStrategy,
          RGBLightDecorator,

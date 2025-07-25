@@ -18,11 +18,11 @@
 import { LightSceneFactory,
          PowerControl,
          BrightnessControl,
-        } from "./interface";
+        } from "../interface";
 
-import { LightBulb } from "./class";
+import { LightBulb } from "../class";
 
-import { DimmingLightDecorator, RGBLightDecorator } from "./decorator";
+import { DimmingLightDecorator, RGBLightDecorator } from "../structural/decorator";
 
 // A Parameterised (or Configurable) Factory
 // One flexible factory that takes in the mood or colour as a parameter.

@@ -3,7 +3,7 @@
  * This file implements a universal remote control using the Strategy Pattern.
  */
 
-import {PowerControl, VolumeControl, ChannelControl} from "../interface";
+import {PowerControl, VolumeControl, ChannelControl} from "../../interface";
 
 export class RemoteDevice {
     constructor(

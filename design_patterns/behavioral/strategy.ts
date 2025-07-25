@@ -11,7 +11,7 @@
  * This example shows how to implement a strategy pattern as a universal remote control.
  */
 
-import { PowerControl, VolumeControl, ChannelControl } from "./interface";
+import { PowerControl, VolumeControl, ChannelControl } from "../interface";
 
 export class DefaultPower implements PowerControl {
     powerOn(): void {
