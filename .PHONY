@@ -1,4 +1,0 @@
-.PHONY: clean
-
-clean:
-	del /q *.exe

@@ -5,9 +5,11 @@ A growing reference of fundamental algorithms, data structures, and programming 
 ## 📚 Sections
 
 ### Sorting Algorithms
+- [Selection Sort](sorting/selection_sort.c)
 
 ### Searching Algorithms
 - [Linear Search](searching/linear_search.c)
+- [Binary Search](searching/binary_search.c)
 
 ### Data Structures
 

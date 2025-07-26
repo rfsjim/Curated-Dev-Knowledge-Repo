@@ -46,6 +46,8 @@ int main(void)
     {
         printf("%i Not Found\n", n);
     }
+
+    return 0;
 }
 
 int binarySearch(int arr[], int len, int search_number)

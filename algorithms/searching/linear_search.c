@@ -40,6 +40,8 @@ int linear_search(int arr[], int len, int search_number);
         printf("%i Not Found\n", n);
     }
 
+    return 0;
+
  }
 
  int linear_search(int arr[], int len, int search_number)
