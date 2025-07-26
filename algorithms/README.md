@@ -5,6 +5,7 @@ A growing reference of fundamental algorithms, data structures, and programming 
 ## 📚 Sections
 
 ### Sorting Algorithms
+- [Bubble Sort](sorting/bubble_sort.c)
 - [Selection Sort](sorting/selection_sort.c)
 
 ### Searching Algorithms
