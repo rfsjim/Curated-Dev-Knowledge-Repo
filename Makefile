@@ -1,15 +1,26 @@
-# Prebuilt Makefile Template for MSYS2 + GCC
+# Root Makefile for dev-handbook
 
-CC = gcc
-CFLAGS = -Wall -Wextra -g
+CC := gcc
+CFLAGS := -Wall -Wextra -Werror -g
+SRC := $(shell find . -type f -name '*.c')
+OUT := $(SRC:.c=.out)
 
-# Default rule: make <program> compiles <program>.c
-%: %.c
-	@echo Compiling $< to $@
+.PHONY: all clean check
+
+all: $(OUT)
+
+# Pattern rule: build file.c into file.out
+%.out: %.c
+	@echo "Compiling $< -> $@"
 	$(CC) $(CFLAGS) $< -o $@
 
-.PHONY: clean
+check: all
+	@echo "Running compiled examples..."
+	@for bin in $(OUT); do \
+		echo ">> $$bin"; \
+		./$$bin || echo "Error in $$bin"; \
+	done
 
-# Clean up executables and object files
 clean:
-	rm -f *.exe *.o
+	@echo "Cleaning up compiled files..."
+	find . -type f \( -name '*.out' -o -name '*.exe' -o -name '*.o' \) -exec rm -f {} +

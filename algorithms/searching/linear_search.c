@@ -1,11 +1,14 @@
 /*
  * Linear Search
  * 
- * Find an element within a list
+ * Find an element within a list by
+ * iterating one by one through the list
  * Worst-case time complexity of O(n)
  */
 
 #include <stdio.h>
+
+int linear_search(int arr[], int len, int search_number);
 
  int main(void)
  {
@@ -22,15 +25,33 @@
     // Number to search for
     int n = 48;
 
-    // Search for number
-    for (int i = 0, len = sizeof(integers) / sizeof(integers[0]); i < len; i++ )
+    // Size of array
+    int len = (sizeof(integers) / sizeof(integers[0]));
+
+    // get result of search
+    int result = linear_search(integers, len, n);
+
+    if (result != -1)
     {
-        if (integers[i] == n)
+        printf("%i Found at index %i\n", n, result);
+    }
+    else
+    {
+        printf("%i Not Found\n", n);
+    }
+
+ }
+
+ int linear_search(int arr[], int len, int search_number)
+ {
+    // Search for number
+    for (int i = 0; i < len; i++ )
+    {
+        if (arr[i] == search_number)
         {
-            printf("%i Found\n", n);
-            return 0;
+            return i;
         }
     }
-    printf("%i Not Found\n", n);
-    return 1;
+
+    return -1;
  }
