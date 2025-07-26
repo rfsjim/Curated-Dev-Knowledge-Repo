@@ -42,24 +42,24 @@ Code implementations of core computer science techniques.
 ![How I feel writing this repo](assets/memes/no_idea_dog.jpg)
 
 - **Sorting Algorithms**
-  - [Bubble Sort](algorithms/sorting/bubble_sort.js)
-  - [Selection Sort](algorithms/sorting/selection_sort.js)
+  - [Bubble Sort](algorithms/sorting/bubble_sort.c)
+  - [Selection Sort](algorithms/sorting/selection_sort.c)
   <!--
-  - [Quick Sort](algorithms/sorting/quick_sort.js)
-  - [Merge Sort](algorithms/sorting/merge_sort.js)
-  - [Radix Sort](algorithms/sorting/radix_sort.js) -->
+  - [Quick Sort](algorithms/sorting/quick_sort.c)
+  - [Merge Sort](algorithms/sorting/merge_sort.c)
+  - [Radix Sort](algorithms/sorting/radix_sort.c) -->
 - **Searching Algorithms**
   - [Linear Search](algorithms/searching/linear_search.c)
-  - [Binary Search](algorithms/searching/binary_search.js)
-  <!-- - [Depth-first search (DFS)](algorithms/searching/dfs.js)
-  - [Dijkstra’s](algorithms/shortest_path/dijkstra.js) -->
+  - [Binary Search](algorithms/searching/binary_search.c)
+  <!-- - [Depth-first search (DFS)](algorithms/searching/dfs.c)
+  - [Dijkstra’s](algorithms/shortest_path/dijkstra.c) -->
 - **Recursion**
-  <!-- - [Factorial](algorithms/recursion/factorial.js) -->
+  <!-- - [Factorial](algorithms/recursion/factorial.c) -->
 - **Data Structures**
-  <!-- - [Hash Table](algorithms/data_structures/hash_table.js)
-  - [Hash Map](algorithms/data_structures/hash_map.js)
-  - [Linked List](algorithms/data_structures/linked_list.js)
-  - [Stack](algorithms/data_structures/stack.js) -->
+  <!-- - [Hash Table](algorithms/data_structures/hash_table.c)
+  - [Hash Map](algorithms/data_structures/hash_map.c)
+  - [Linked List](algorithms/data_structures/linked_list.c)
+  - [Stack](algorithms/data_structures/stack.c) -->
 
 📄 [Full Algorithm Index](algorithms/README.md)
 
