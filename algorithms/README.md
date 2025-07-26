@@ -6,11 +6,12 @@ A growing reference of fundamental algorithms, data structures, and programming 
 
 ### Sorting Algorithms
 - [Bubble Sort](sorting/bubble_sort.c)
+- [Merge Sort](sorting/merge_sort.c)
 - [Selection Sort](sorting/selection_sort.c)
 
 ### Searching Algorithms
-- [Linear Search](searching/linear_search.c)
 - [Binary Search](searching/binary_search.c)
+- [Linear Search](searching/linear_search.c)
 
 ### Data Structures
 

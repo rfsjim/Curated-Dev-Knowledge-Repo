@@ -44,13 +44,13 @@ Code implementations of core computer science techniques.
 - **Sorting Algorithms**
   - [Bubble Sort](algorithms/sorting/bubble_sort.c)
   - [Selection Sort](algorithms/sorting/selection_sort.c)
+  - [Merge Sort](algorithms/sorting/merge_sort.c)
   <!--
   - [Quick Sort](algorithms/sorting/quick_sort.c)
-  - [Merge Sort](algorithms/sorting/merge_sort.c)
   - [Radix Sort](algorithms/sorting/radix_sort.c) -->
 - **Searching Algorithms**
-  - [Linear Search](algorithms/searching/linear_search.c)
   - [Binary Search](algorithms/searching/binary_search.c)
+  - [Linear Search](algorithms/searching/linear_search.c)
   <!-- - [Depth-first search (DFS)](algorithms/searching/dfs.c)
   - [Dijkstra’s](algorithms/shortest_path/dijkstra.c) -->
 - **Recursion**

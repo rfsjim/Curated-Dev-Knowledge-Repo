@@ -46,10 +46,12 @@ void swap(int arr[], int a, int b);
 
  void bubble_sort(int arr[], int N)
  {
+    // loop from start of array to second last index
     for (int i = 0; i < N - 1; i++)
     {
         bool swapped = false;
 
+        // loop from start of array to (array length - current index - 1)
         for (int j = 0; j < N - i - 1; j++)
         {
             if (arr[j] > arr[j+1])
