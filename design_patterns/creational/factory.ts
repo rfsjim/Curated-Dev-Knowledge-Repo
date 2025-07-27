@@ -40,4 +40,12 @@ export class ConfigurableLightFactory implements LightSceneFactory {
         }
         return new RGBLightDecorator(light, this.color);
     }
+
+    createDimmingLight(): PowerControl & BrightnessControl {
+        let dimmingLight: PowerControl & BrightnessControl = new LightBulb();
+        for (const decorate of this.decorators) {
+            dimmingLight = decorate(dimmingLight);
+        }
+        return new DimmingLightDecorator(dimmingLight);
+    }
 }

@@ -22,8 +22,6 @@
  * central point of control for the devices. 
 */
 
-import { SmartTV, AirConditioner } from "../class";
-
 type SceneName =
     | "movie-night"
     | "good-morning"

@@ -125,7 +125,8 @@ export class AirConditionerObserver implements Observer {
         }
 
         if (scene === "movie-night") {
-            
+            // TODO: perform actions for movie-night scene
+            console.log("Movie night time");
         }
     }
 }

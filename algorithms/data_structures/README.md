@@ -9,6 +9,9 @@
     - `isEmpty` - Test if queue has no elements
     - `Size` - Returns the size of the queue
 
+- [C Queue](queue.c) - Example C Implementation of Queue
+- [TS Queue](queue.ts) - Example TypeScript Implementation of Queue
+
 ## Stacks
 - **LIFO** **L**ast **I**n **F**irst **O**ut - just like a stack of papers on your desk, you add and remove from the top.
 - Operations
