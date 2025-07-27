@@ -71,18 +71,33 @@ export class FlashingLightDecorator extends LightBulb {
 }
 
 export class DiscoLightDecorator extends LightBulb {
+    private intervalID: ReturnType<typeof setInterval> | null = null;
     constructor(private decoratedLightBulb: LightBulb) {
         super();
+        this.intervalID = null;
         console.log("🕺 Disco Light Bulb Initialized");
     }
     discoMode(): void {
         console.log("Disco mode activated! 🎉");
         this.decoratedLightBulb.powerOn();
-        setInterval(() => {
+
+        if (this.intervalID !== null) {
+            console.log("Disco mode is already running");
+            return;
+        }
+        this.intervalID = setInterval(() => {
             const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
             this.changeColor(randomColor);
         }, 1000); // Change color every second
+    }
+    stopDisco(): void {
+        if (this.intervalID !== null) {
+            clearInterval(this.intervalID);
+            this.intervalID = null;
+            console.log("🛑 Disco mode stopped.");
+            this.decoratedLightBulb.powerOff();
+        }
     }
     changeColor(color: string): void {
         console.log(`Disco Light Bulb color changed to ${color}.`);

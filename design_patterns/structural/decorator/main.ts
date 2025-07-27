@@ -43,3 +43,8 @@ flashing.flash();
 
 // Using the Disco light decorator
 disco.discoMode();
+
+// Stop disco mode after 10 seconds
+setTimeout(() => {
+    disco.stopDisco();
+}, 10000);
