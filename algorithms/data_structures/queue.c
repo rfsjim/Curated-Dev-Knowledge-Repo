@@ -85,5 +85,7 @@ int main(void)
     
     peek(&q, &value);
     printf("Peek: %d\n", value);        // 20
+
+    printf("Is Empty: %d\n", isEmpty(&q));    // false
     printf("Size: %d\n", size(&q));    // 1
 }

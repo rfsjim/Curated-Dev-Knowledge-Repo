@@ -45,7 +45,7 @@ check: all
 
 clean:
 	@echo "Cleaning up compiled files..."
-	find . -type f \( -name '*.out' -o -name '*.js' \) -exec rm -f {} +
+	find . -path ./node_modules -prune -o -type f \( -name '*.out' -o -name '*.js' \) -exec rm -f {} +
 
 lint:
 	@echo "Linting TypeScript files..."
