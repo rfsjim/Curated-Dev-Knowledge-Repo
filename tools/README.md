@@ -23,3 +23,61 @@ Next.js is a full-stack web application layer — it handles everything from the
 In other words:
 
 > Flask served data to the browser; Next.js is the browser and the server, unified.
+
+## Emmet Toolkit for HTML in VS Code
+Emmet is a powerful abbreviation system built into VS Code that helps you write HTML (and CSS) faster with shorthand syntax. This guide outlines practical usage patterns, settings, and helpful extensions to make the most of Emmet in your workflow.
+
+### Quick Start
+
+| Abbreviation | Output |
+|-------------|--------|
+| `!` | Boilerplate HTML |
+| `lorem` | Filler text |
+| `div>ul>li*3` | Creates a `<div>` containing a list of 3 items |
+| `Ctrl+Shift+P` → `Emmet: Wrap with Abbreviation` | Wrap selected text with Emmet abbreviation |
+
+### Essential Emmet Patterns
+
+#### IDs and Classes
+
+```emmet
+div#main.container.wrapper
+```
+
+#### Text Content Shortcut
+
+```emmet
+a.btn{Click Me}
+```
+
+#### Nesting with Siblings
+
+```emmet
+ul>li.item$*3
+```
+
+The $ gives you auto-incrementing numbers!
+
+#### Complex Layouts in One Line
+
+```emmet
+header>nav>ul>li*3>a{Link $}
+```
+
+#### Form Quickstart
+
+```emmet
+form>label+input:email+button{Submit}
+```
+
+#### Emmet Wrap Power Use
+Use `Wrap with Abbreviation` with a real abbreviation like:
+
+```emmet
+section.content>h2{Title}+p{Some text}+ul>li*3
+```
+
+#### Tips
+- Use $ to insert auto-incrementing numbers in loops.
+- Use {} to insert text content.
+
