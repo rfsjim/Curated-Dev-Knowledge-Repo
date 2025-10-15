@@ -105,11 +105,27 @@ section.content>h2{Title}+p{Some text}+ul>li*3
 
 4. Push changes to remote
 `git push`
-(Share your branch with others / for backup / for pull request)
+(Share your branch with others / for backup / for pull request.)
 
 5. Merge to main branch (after review)
 `git checkout main` → `git merge feature-xyz`
 (Bring feature branch changes into the main project)
+
+### Branches
+Branches in Git allow your repository to hold multiple alternate reality versions of your files at the same time.
+
+When you make commits on a specific branch, those changes only exist on that branch, leaving all of your other branches exactly as they were when you branched off of them.
+
+This means that you can keep your main branch as a place for only finished features that you know are working properly, and add each feature to your project using dedicated branches.
+
+Sometimes, the same lines in a file will have been changed by two different branches. When this happens, you will have a merge conflict when you try and merge those branches together. In order to finish merging the branches you will have to first resolve the conflict.
+
+When you don’t need a branch anymore, it can be deleted using `git branch -d <branch_name>` if the branch has already been merged into main, or with `git branch -D <branch_name>` if it hasn’t. You will usually want to delete branches when you’re done with them, otherwise they can pile up and make it more difficult to find the branch you’re looking for when you need it.
+
+#### Sharing Code
+Another great use case for branches is to share code with others that you might not want to commit to your main branch (or feature branch) at all.
+
+For example: if you have a bug in a new feature you’re working on that you can’t figure out, and it causes your code to break, you don’t want to commit that broken code and have it in your project’s “permanent record”. You could instead create a new temporary branch, switch to it and commit your code to this new branch. If you then push this new temporary branch to GitHub you can share it with others that may be able to help solve your problem.
 
 ### Conventional Commits
 https://www.conventionalcommits.org/
