@@ -124,6 +124,7 @@ When you don’t need a branch anymore, it can be deleted using `git branch -d <
 
 `git checkout -b <branch_name>` Create a new branch and immediately switch to new branch.
 `git switch -c <branch_name>` Git 2.23 version but previous command also works.
+`git push origin <branch_name>` Pushes your new branch to the remote repository
 
 #### Sharing Code
 Another great use case for branches is to share code with others that you might not want to commit to your main branch (or feature branch) at all.
