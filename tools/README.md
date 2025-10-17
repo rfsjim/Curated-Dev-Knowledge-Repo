@@ -91,6 +91,35 @@ section.content>h2{Title}+p{Some text}+ul>li*3
 - `git checkout <branch_name>` - Switches to the specified branch in your working directory.
 - `git merge <branch_name>` - Merges changes from the specified branch into the current branch.
 
+### Git Create New Repo
+
+#### Classic Workflow
+1. Create new repo on GitHub (via website)
+2. Clone it locally
+`git clone git@github.com:yourname/reponame.git`
+
+#### Start local, then create the GitHub repo via CLI
+Requires `gh` GitHub CLI tools
+Create folder locally then push it up and create repo automatically
+
+1. Make your new project folder
+`mkdir reponame && cd reponame`
+
+2. Initialize git
+`git init`
+
+3. Add an initial file (README or package.json)
+`echo "# New Project" > README.md`
+`git add .`
+`git commit -m "Initial commit"`
+
+4. Create a GitHub repo from your terminal (with GitHub CLI)
+`gh repo create repo_name --public --source=. --remote=origin`
+
+5. Push it up
+`git push -u origin main`
+
+
 ### Git Workflow
 1. Create a feature branch
 `git branch feature-xyz` → `git checkout feature-xyz`
