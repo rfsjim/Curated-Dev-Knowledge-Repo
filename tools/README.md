@@ -111,6 +111,15 @@ section.content>h2{Title}+p{Some text}+ul>li*3
 `git checkout main` → `git merge feature-xyz`
 (Bring feature branch changes into the main project)
 
+6. See All Commits
+`git log`
+
+7. Push main branch onto remote
+`git push origin main`
+
+8. Delete development branch
+`git branch -d feature-xyz` and delete from remote repo `git push origin --delete feature xyz`
+
 ### Branches
 Branches in Git allow your repository to hold multiple alternate reality versions of your files at the same time.
 
