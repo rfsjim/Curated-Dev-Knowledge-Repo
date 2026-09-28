@@ -90,6 +90,7 @@ section.content>h2{Title}+p{Some text}+ul>li*3
 - `git branch <branch_name>` - Creates a new branch with the specified name.
 - `git checkout <branch_name>` - Switches to the specified branch in your working directory.
 - `git merge <branch_name>` - Merges changes from the specified branch into the current branch.
+- Inspect details of the commit message `git show -s --format='%B' COMMIT` or inspect hex code for hidden characters with `git show -s --format='%s' COMMIT | Format-Hex`
 
 ### Git Create New Repo
 
@@ -227,3 +228,41 @@ Refs: #123
 #### Optional Enhancements:
 - Breaking changes: Use BREAKING CHANGE: in the footer or ! after the type (e.g., feat!: ...)
 - Issue references: Add Closes #123 or Fixes #456 in the footer to link commits to issues
+
+### Tags
+Tags can assist with versioning and also work as place marks in code to identify where certain milestones were achieved.
+
+#### New Tag
+git tag -a v1.0 a1b2c3d4e5f67890abcdef1234567890abcdef12 -m "Tagging version 1.0"
+git push origin --tags
+
+#### Rename Existing Tag
+1. Record the sha hash of the actual commit
+`git rev-parse 'TAG^{commit}'`
+
+2. Delete only the local tag
+`git tag -d 'TAG'`
+
+3. Recreate a new annotated tag object directly on that commit
+`git tag -a 'TAG' 'COMMIT_SHA' -m "TAG"`
+
+4. Inspect it
+`git cat-file -p 'refs/tags/TAG'`
+
+5. Only when happy, replace remote tag
+`git push origin --force refs/tags/TAG`
+
+##### Alternative Workflow
+Sometimes the deleted tag won't stay deleted instead we can force changes to the annotated tag
+
+1. Record the details of the actual commit and message
+`git cat-file -p 'refs/tags/TAG'`
+
+2. Force annotated tag changes
+`git tag -fa 'TAG' 'COMMIT_SHA' -m "TAG"`
+
+3. Inspect it
+`git cat-file -p 'refs/tags/TAG'`
+
+4. Only when happy, replace remote tag
+`git push origin --force refs/tags/TAG`
